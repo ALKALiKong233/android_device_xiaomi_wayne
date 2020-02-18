@@ -42,7 +42,14 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_FLASH_BLOCK_SIZE := 262144
-TARGET_PREBUILT_KERNEL := device/xiaomi/wayne/prebuilt/kernel
+# TARGET_PREBUILT_KERNEL := device/xiaomi/wayne/prebuilt/kernel
+
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_KERNEL_CONFIG := wayne_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
+
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
 
 # Platform
 # It's not needed for booting TWRP, but it should be added
